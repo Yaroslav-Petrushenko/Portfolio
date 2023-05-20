@@ -1,0 +1,34 @@
+- 
+    let skillMenu = [
+        {
+            name: "HTML/CSS JavaScript" 
+        },
+        {
+            name: "SASS/Pug Galp" 
+        },
+        {
+            name: "Bootstrap, jQuery" 
+        },
+        {
+            name: "Node.js, Ajax" 
+        },
+        {
+            name: "Version Control / Git" 
+        },
+        {
+            name: "PHP, MySQL" 
+        },
+        {
+            name: "React" 
+        },
+    ] 
+
+-
+
+
+mixin skillsBar (items) 
+    for item in items 
+        .skill-name
+            h2 #{item.name}
+
+//- +skillsBar(skillMenu)  

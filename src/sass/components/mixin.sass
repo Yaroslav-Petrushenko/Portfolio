@@ -1,0 +1,10 @@
+=media ($size)
+    @media screen and ( min-width: #{$size}px)
+        @content
+=mediaMax ($size)
+    @media screen and ( max-width: #{$size}px)
+        @content
+@mixin reset-margin-padding 
+    margin: 0
+    padding: 0
+    

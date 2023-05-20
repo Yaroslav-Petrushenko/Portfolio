@@ -1,0 +1,217 @@
+.main
+    justify-content: space-between
+    padding: 200rem 0
+
+.text-about-me
+    padding-left: 100rem
+    max-width: 30%
+    p
+        color: #FFFFFF
+        font-family: Inter
+        font-style: normal
+        line-height: 1.4
+        text-shadow: 0px 4px 4px 0px #00000080
+        font-weight: 300
+        font-size: 26rem
+
+.get-to-know-me
+    max-width: 45%
+    p
+        text-transform: uppercase
+        color: #FFFFFF
+        font-family: Inter
+        font-style: normal
+        text-shadow: 0px 4px 4px 0px #00000080
+        font-weight: 300
+        font-size: 26rem
+    h2 
+        padding-top: 60rem
+        text-transform: uppercase
+        color: #FFFFFF
+        text-shadow: 0px 4px 4px 0px #00000080
+        font-family: 'Nunito'
+        font-style: italic
+        line-height: 1
+        font-weight: 100
+        font-size: 90rem
+
+
+.education
+    justify-content: space-between
+    padding: 200rem 0
+.my-education
+    h2 
+        text-transform: uppercase
+        color: #FFFFFF
+        text-shadow: 0px 4px 4px 0px #00000080
+        font-family: 'Nunito'
+        font-style: italic
+        line-height: 1
+        font-weight: 100
+        font-size: 90rem
+
+.about-my-education 
+    max-width: 35%
+    padding-right: 100rem
+    p
+        color: #FFFFFF
+        font-family: Inter
+        line-height: 1.5
+        font-style: normal
+        text-shadow: 0px 4px 4px 0px #00000080
+        font-weight: 300
+        font-size: 26rem
+
+
+.skills
+    padding: 200rem 0
+    justify-content: flex-end
+    position: relative
+.my-skills
+    // max-width: 30%
+    width: 50%
+    p
+        padding-left: 10rem
+        text-transform: uppercase
+        color: #FFFFFF
+        font-family: Inter
+        font-style: normal
+        text-shadow: 0px 4px 4px 0px #00000080
+        font-weight: 300
+        font-size: 26rem
+
+
+.left
+    position: absolute
+    width: 70rem
+    height: 70rem
+    top: 50%
+    left: 3%
+    border: 2rem solid #FFFFFF99
+    border-radius: 50%
+    transform: translateY(-50%)
+    background: #FFFFFF0D
+    transition: all .3s ease
+    z-index: 2
+    cursor: pointer
+    &:hover
+        border: 2rem solid #FFFFFFD9
+    &::before
+        content: ""
+        position: absolute
+        width: 10px
+        height: 10px
+        border-right: 2px solid #FFFFFF99
+        border-bottom: 2px solid #FFFFFF99
+        border-radius: 1px
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -50%) rotate(135deg)
+        z-index: 3
+        &:hover
+            border-right: 2px solid #FFFFFFD9
+            border-bottom: 2px solid #FFFFFFD9
+.right
+    position: absolute
+    width: 70rem
+    height: 70rem
+    top: 50%
+    left: 10%
+    border: 2rem solid #FFFFFF99
+    border-radius: 50%
+    transform: translateY(-50%)
+    background: #FFFFFF0D
+    transition: all .3s ease
+    z-index: 2
+    cursor: pointer
+    &:hover
+        border: 2rem solid #FFFFFFD9
+    &::before
+        content: ""
+        position: absolute
+        width: 10px
+        height: 10px
+        border-right: 2px solid #FFFFFF99
+        border-bottom: 2px solid #FFFFFF99
+        border-radius: 1px
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -50%) rotate(-45deg)
+        z-index: 3
+        &:hover
+            border-right: 2px solid #FFFFFFD9
+            border-bottom: 2px solid #FFFFFFD9
+
+.slider-bar
+    width: 100%
+    height: 300rem
+    overflow: hidden
+    position: relative
+
+.skill-name
+    padding-left: 10rem
+    width: 100%
+    height: 100%
+    position: absolute
+    left: 0
+    top: 0
+    opacity: 0
+    transition: all .7s ease
+
+.skill-name.active 
+  opacity: 1
+
+.skill-name
+    padding-top: 60rem
+    h2
+        text-transform: uppercase
+        color: #FFFFFF
+        text-shadow: 0px 4px 4px 0px #00000080
+        font-family: 'Nunito'
+        font-style: italic
+        line-height: 1
+        font-weight: 100
+        font-size: 90rem
+
+.my-work
+    padding: 200rem 0
+    align-items: center
+    justify-content: space-between
+    .my-work-img 
+        width: 50%
+        img
+            width: 77%
+    .my-work-description
+        text-align: left
+        align-items: center
+        width: 50%
+        h2
+            text-transform: uppercase
+            color: #FFFFFF
+            line-height: 1
+            text-shadow: 0px 4px 4px 0px #00000080
+            font-family: 'Nunito'
+            font-style: italic
+            font-weight: 100
+            font-size: 90rem
+    .info
+        padding-top: 15rem
+        font-family: 'Inter'
+        font-style: normal
+        font-weight: 300
+        font-size: 26px
+        color:#C5C5C5
+    .tehc
+        font-family: 'Inter'
+        font-style: normal
+        font-weight: 300
+        font-size: 26px
+        color:#ffffff
+    .descr
+        padding-top: 15rem
+        font-family: 'Inter'
+        font-style: normal
+        font-weight: 300
+        font-size: 26px
+        color:#ffffff
+        letter-spacing: 1

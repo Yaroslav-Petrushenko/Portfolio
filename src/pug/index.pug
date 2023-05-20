@@ -1,0 +1,124 @@
+doctype html
+include components/mixin
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0, user-scalable=yes, maximum-scale=3.0 minimum-scale=1.0")
+        title Document
+        link(rel="stylesheet", href="css/styles.css")
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;1,200&display=swap" rel="stylesheet">
+    body 
+        .overflowX-hidden
+            canvas.grain
+            header
+                .header
+                    .logo 
+                        <svg width="30" height="39" viewBox="0 0 30 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M11.4255 38.5V24.6173L21.3042 0.5H19.558L10.6272 22.692L1.64646 0.5H0L9.82888 24.6173V38.5H11.4255Z" fill="white"/>
+                            <path d="M15.4313 38.5V20.6147H20.0713C25.5595 20.6147 30 16.1053 30 10.5827C30 5.00934 25.5595 0.5 20.0713 0.5H13.8347V38.5H15.4313ZM20.0713 2.12133C24.7114 2.12133 28.4034 5.87067 28.4034 10.5827C28.4034 15.244 24.7114 18.9933 20.0713 18.9933H15.4313V2.12133H20.0713Z" fill="white"/>
+                        </svg>
+                    .contact-header 
+                        a(href="") Contacts
+                .greeting-whith-me.flex.wrapper
+                    .greeting-visitors
+                        p.hi HI! 
+                        h1 I`m Front-End developer
+                        p.my-name My name is Yaroslav Petrushenko
+                    .animation-structure 
+                        canvas#canvas3d(style="width: 250%; height: 250%;")
+            section.main.flex.wrapper
+                .text-about-me
+                    p Hello everyone. I like to learn new things, recently I discovered the beautiful, limitless world of programming. I am looking for an entry level position in a company to be hardworking, learn, grow and develop in the long term. I am open to work opportunities where I can contribute, learn and grow. If you have a good opportunity that matches my skills and experience, then don't hesitate to contact me.
+                .get-to-know-me
+                    p About me
+                    h2 Get to know me!
+            section.education.flex.wrapper
+                .my-education
+                    h2 Education
+                .about-my-education 
+                    p - Hashtag academy, educational program: Front-end developer.
+                    p - Sumy National Agrarian University. Specialty: Construction and civil engineering. Qualification: master's degree. Professional qualification: civil engineer.
+                    p - Sumy National Agrarian University. Specialty: Construction. Qualification: bachelor's degree. Professional qualification: Bachelor of construction.
+            section.skills.flex.wrapper
+                span.left 
+                span.right
+                .my-skills 
+                    p My Skills
+                    .slider-bar.flex
+                        +skillsBar(skillMenu)  
+                    
+            section.my-latest-work.wrapper
+                .my-work.flex
+                    .my-work-img 
+                        img(src="img/Rikka.jpg", alt="rikka")
+                    .my-work-description 
+                        h2 Rikka
+                        p.info Technology:
+                        p.tehc SassPug, Vanilla JS
+                        p.descr Responsive carousel with many settings, a small online store, various animations, parallax, zoom inside the image, popup.
+                .my-work.flex
+                    .my-work-description 
+                        h2 Rikka
+                        p.info Technology:
+                        p.tehc SassPug, Vanilla JS
+                        p.descr Responsive carousel with many settings, a small online store, various animations, parallax, zoom inside the image, popup.
+                    .my-work-img 
+                        img(src="img/Rikka.jpg", alt="rikka")
+                .my-work.flex
+                    .my-work-img 
+                        img(src="img/Rikka.jpg", alt="rikka")
+                    .my-work-description 
+                        h2 Rikka
+                        p.info Technology:
+                        p.tehc SassPug, Vanilla JS
+                        p.descr Responsive carousel with many settings, a small online store, various animations, parallax, zoom inside the image, popup.
+
+            footer.wrapper
+                .footer-sect 
+                    .write-dev-des.flex
+                        .write-me 
+                            p Contacts
+                            h2  Write me
+                        .info-for-creators.flex
+                            .dev-des-info 
+                                h3 Fully developed
+                                p Yaroslav Petrushenko
+                                a(href="mailto:igorovica@gmail.com") igorovica@gmail.com        
+                                a(href="" target="_blank") CV   
+                            .dev-des-info
+                                h3 Creative Design
+                                p Vladislav Kiyan
+                                a(href="mailto:vlakiyn@gmail.com") vlakiyn@gmail.com
+                                a(href="lavasog") inst: lavasog
+                .let-work.flex
+                    p let's work
+                    a(href="mailto:") 
+                        <svg width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M10.3017 0.131317C10.1226 -0.0205659 9.8413 -0.0422976 9.55043 0.0744802H9.54995C9.24403 0.197228 0.890475 3.78033 0.55041 3.92672C0.488559 3.94821 -0.0516285 4.14976 0.00401412 4.59873C0.0536865 5.00351 0.487842 5.17115 0.540858 5.1905L2.66459 5.91767C2.80549 6.38669 3.3249 8.11711 3.43977 8.48678C3.51141 8.71723 3.62819 9.02004 3.83285 9.08237C4.01243 9.15163 4.19106 9.08834 4.30665 8.9976L5.60505 7.79328L7.70109 9.42793L7.751 9.45778C7.89333 9.52083 8.02969 9.55235 8.15984 9.55235C8.26038 9.55235 8.35686 9.53348 8.44904 9.49575C8.76307 9.36679 8.88869 9.06757 8.90182 9.03366L10.4675 0.895746C10.563 0.461113 10.4302 0.239975 10.3017 0.131317ZM4.53757 6.20854L3.82115 8.11902L3.10472 5.73092L8.59734 1.67116L4.53757 6.20854Z" fill="white"/>
+                        </svg>
+                    a(href="mailto:") 
+                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M7 0C3.13425 0 0 3.18333 0 7.10961C0 10.4411 2.25867 13.2286 5.30367 14C5.271 13.904 5.25 13.7926 5.25 13.6546V12.4394C4.96592 12.4394 4.48992 12.4394 4.37033 12.4394C3.89142 12.4394 3.46558 12.2303 3.25908 11.8416C3.02983 11.4097 2.99017 10.7491 2.422 10.3451C2.25342 10.2106 2.38175 10.0571 2.576 10.0779C2.93475 10.181 3.23225 10.431 3.51225 10.8019C3.79108 11.1733 3.92233 11.2575 4.44325 11.2575C4.69583 11.2575 5.07383 11.2427 5.42967 11.1858C5.621 10.6923 5.95175 10.2378 6.356 10.0234C4.025 9.77986 2.91258 8.60203 2.91258 7.00296C2.91258 6.31452 3.20133 5.64858 3.69192 5.08752C3.53092 4.5306 3.3285 3.39484 3.75375 2.96234C4.80258 2.96234 5.43667 3.65315 5.58892 3.83978C6.11158 3.65789 6.68558 3.5548 7.28875 3.5548C7.89308 3.5548 8.46942 3.65789 8.99325 3.84097C9.14375 3.65552 9.77842 2.96234 10.8296 2.96234C11.2566 3.39543 11.0518 4.53593 10.8891 5.09166C11.3767 5.65155 11.6637 6.3157 11.6637 7.00296C11.6637 8.60085 10.5531 9.77808 8.22558 10.0228C8.86608 10.3623 9.33333 11.3161 9.33333 12.0348V13.6546C9.33333 13.7162 9.31992 13.7606 9.31292 13.8134C12.0406 12.8423 14 10.2118 14 7.10961C14 3.18333 10.8657 0 7 0Z" fill="white"/>
+                        </svg>
+                    a(href="mailto:") 
+                        <svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1.38421 0C0.61997 0 0 0.590813 0 1.32031C0 2.04981 0.61947 2.6543 1.38318 2.6543C2.1469 2.6543 2.76739 2.04981 2.76739 1.32031C2.76739 0.591313 2.14845 0 1.38421 0ZM8.13746 3.5C6.97513 3.5 6.31007 4.08023 5.99107 4.65723H5.95731V3.65527H3.66667V11H6.05348V7.36426C6.05348 6.40626 6.12923 5.48047 7.37119 5.48047C8.59533 5.48047 8.61319 6.5728 8.61319 7.4248V11H10.9969H11V6.96582C11 4.99182 10.5554 3.5 8.13746 3.5ZM0.19029 3.65527V11H2.57915V3.65527H0.19029Z" fill="white"/>
+                        </svg>
+                    a(href="mailto:") 
+                        <svg width="13" height="11" viewBox="0 0 13 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 2.1C12 1.495 11.505 1 10.9 1H2.1C1.495 1 1 1.495 1 2.1M12 2.1V8.7C12 9.305 11.505 9.8 10.9 9.8H2.1C1.495 9.8 1 9.305 1 8.7V2.1M12 2.1L6.5 5.95L1 2.1" stroke="white" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+            .copyright.wrapper
+                p © copyright 2023 Y.Petrushenko
+        
+        script(async, src="https://unpkg.com/es-module-shims@1.3.6/dist/es-module-shims.js")
+        script(type="importmap").
+            {
+                "imports": {
+                "@splinetool/runtime": "https://unpkg.com/@splinetool/runtime@0.9.304/build/runtime.js"
+                }
+            }
+        script(type="module" src="js/scripts.js") 
