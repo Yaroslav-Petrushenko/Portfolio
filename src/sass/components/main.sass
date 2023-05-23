@@ -1,10 +1,14 @@
 .main
+    flex-direction: column-reverse
     justify-content: space-between
-    padding: 200rem 0
+    padding-top: 300rem
+    +media(1100)
+        flex-direction: row
+        padding: 200rem 0
 
 .text-about-me
-    padding-left: 100rem
-    max-width: 30%
+    padding-left: 0
+    width: 100%
     p
         color: #FFFFFF
         font-family: Inter
@@ -13,9 +17,16 @@
         text-shadow: 0px 4px 4px 0px #00000080
         font-weight: 300
         font-size: 26rem
+    +media(1100)
+        // padding-left: 100rem
+        max-width: 40%
+    +media(1300)
+        padding-left: 100rem
+        max-width: 30%
 
 .get-to-know-me
-    max-width: 45%
+    max-width: 100%
+    padding-bottom: 50rem
     p
         text-transform: uppercase
         color: #FFFFFF
@@ -33,13 +44,26 @@
         font-style: italic
         line-height: 1
         font-weight: 100
-        font-size: 90rem
-
+        font-size: 47rem
+        +media(768)
+            font-size: 70px
+        +media(992)
+            font-size: 90px
+    +media(1100)
+        max-width: 45%
+        padding-bottom: 0
 
 .education
     justify-content: space-between
-    padding: 200rem 0
+    flex-direction: column
+    padding-top: 200rem
+    +media(1100)
+        flex-direction: row
+        padding: 200rem 0
+
 .my-education
+    max-width: 50%
+    padding-bottom: 50rem
     h2 
         text-transform: uppercase
         color: #FFFFFF
@@ -48,11 +72,18 @@
         font-style: italic
         line-height: 1
         font-weight: 100
-        font-size: 90rem
+        font-size: 47rem
+        +media(768)
+            font-size: 70px
+        +media(992)
+            font-size: 90px
+    +media(1100)
+        max-width: 45%
+        padding-bottom: 0
 
 .about-my-education 
-    max-width: 35%
-    padding-right: 100rem
+    padding-right: 0
+    width: 100%
     p
         color: #FFFFFF
         font-family: Inter
@@ -61,15 +92,25 @@
         text-shadow: 0px 4px 4px 0px #00000080
         font-weight: 300
         font-size: 26rem
-
+    +media(1100)
+        // padding-left: 100rem
+        max-width: 40%
+    +media(1300)
+        padding-right: 100rem
+        max-width: 30%
 
 .skills
     padding: 200rem 0
-    justify-content: flex-end
+    justify-content: space-between
+    flex-direction: column-reverse
+    +media(1100)
+        flex-direction: row
+
+.button-slider
     position: relative
+
 .my-skills
-    // max-width: 30%
-    width: 50%
+    width: 100%
     p
         padding-left: 10rem
         text-transform: uppercase
@@ -79,14 +120,15 @@
         text-shadow: 0px 4px 4px 0px #00000080
         font-weight: 300
         font-size: 26rem
-
-
+    +media(1100)
+        width: 50%
 .left
     position: absolute
+    // position: relative
     width: 70rem
     height: 70rem
     top: 50%
-    left: 3%
+    // right: 30rem
     border: 2rem solid #FFFFFF99
     border-radius: 50%
     transform: translateY(-50%)
@@ -113,10 +155,11 @@
             border-bottom: 2px solid #FFFFFFD9
 .right
     position: absolute
+    // position: relative
     width: 70rem
     height: 70rem
     top: 50%
-    left: 10%
+    left: 100rem
     border: 2rem solid #FFFFFF99
     border-radius: 50%
     transform: translateY(-50%)
@@ -171,47 +214,179 @@
         font-style: italic
         line-height: 1
         font-weight: 100
-        font-size: 90rem
+        // font-size: 90rem
+        font-size: 47rem
+        +media(768)
+            font-size: 70px
+        +media(992)
+            font-size: 90px
+
+// .my-latest-work
+//     position: relative
+//     overflow: hidden
+//     width: 100%
+//     height: 650rem
+//     padding-bottom: 100rem
+//     +media(900)
+//         position: static
+//         height: 100%
+        
+
+.my-work.active 
+    opacity: 1
+
+.dots 
+    position: absolute
+    bottom: 10px
+    left: 50%
+    transform: translateX(-50%)
+    
+
+.dot 
+    display: inline-block
+    width: 10px
+    height: 10px
+    background-color: #000
+    border-radius: 50%
+    margin: 0 5px
+    opacity: 0.5
+    transition: opacity 0.5s ease /* CSS-перехід для зміни прозорості */
+    
+
+.dot.active 
+    opacity: 1
+
+
+
+// .my-work
+//     display: flex
+//     opacity: 1
+//     padding: 70rem 0
+//     align-items: center
+//     justify-content: center
+//     // flex-direction: column
+//     .my-work-img 
+//         width: 100%
+//         margin: 0 auto
+//         img
+//             width: 100%
+//             +media(900)
+//                 width: 77%
+//         +media(900)
+//             width: 50%
+//     +media(900)
+//         flex-direction: row
+//         padding: 200rem 0
+            
+.my-work-description
+    text-align: left
+    align-items: center
+    width: 90%
+    position: absolute
+    z-index: 2
+    h2
+        text-transform: uppercase
+        color: #FFFFFF
+        line-height: 1
+        text-shadow: 0px 4px 4px 0px #00000080
+        font-family: 'Nunito'
+        font-style: italic
+        font-weight: 100
+        // font-size: 90rem
+        font-size: 40rem
+        +media(768)
+            font-size: 70px
+        +media(992)
+            font-size: 90px
+    +media(900)
+        position: static
+        justify-content: space-between
+        width: 50%
+.startup
+    display: flex
+    justify-content: flex-end
+
 
 .my-work
-    padding: 200rem 0
+    position: relative
+    display: flex
+    opacity: 1
+    padding: 70rem 0
     align-items: center
-    justify-content: space-between
-    .my-work-img 
-        width: 50%
+    justify-content: center
+    flex-direction: column
+
+    .my-work-img
+        position: relative
+        width: 100%
+        margin: 0 auto
         img
-            width: 77%
-    .my-work-description
-        text-align: left
-        align-items: center
-        width: 50%
-        h2
-            text-transform: uppercase
-            color: #FFFFFF
-            line-height: 1
-            text-shadow: 0px 4px 4px 0px #00000080
-            font-family: 'Nunito'
-            font-style: italic
-            font-weight: 100
-            font-size: 90rem
-    .info
-        padding-top: 15rem
-        font-family: 'Inter'
-        font-style: normal
-        font-weight: 300
+            width: 100%
+        &::before
+            content: ''
+            position: absolute
+            top: 0
+            left: 0
+            width: 100%
+            height: 100%
+            background-color: rgba(0, 0, 0, 0.5)
+    +media(900)
+        flex-direction: row
+        justify-content: space-between
+        padding: 200rem 0
+        position: static
+        .my-work-img
+            width: 36%
+            img
+                width: 100%
+
+        
+
+.info
+    padding-top: 15rem
+    font-family: 'Inter'
+    font-style: normal
+    font-weight: 300
+    font-size: 18px
+    color: #C5C5C5
+
+    +media(768)
+        font-size: 22px
+
+    +media(992)
         font-size: 26px
-        color:#C5C5C5
-    .tehc
-        font-family: 'Inter'
-        font-style: normal
-        font-weight: 300
+
+.tehc
+    font-family: 'Inter'
+    font-style: normal
+    font-weight: 300
+    font-size: 18px
+    color: #ffffff
+    +media(768)
+        font-size: 22px
+
+    +media(992)
         font-size: 26px
-        color:#ffffff
-    .descr
-        padding-top: 15rem
-        font-family: 'Inter'
-        font-style: normal
-        font-weight: 300
+
+.descr
+    padding-top: 15rem
+    font-family: 'Inter'
+    font-style: normal
+    font-weight: 300
+    font-size: 18px
+    color: #ffffff
+    letter-spacing: 1
+    +media(768)
+        font-size: 22px
+
+    +media(992)
         font-size: 26px
-        color:#ffffff
-        letter-spacing: 1
+
+.view-site
+    text-transform: uppercase
+    padding-top: 15rem
+    font-family: 'Inter'
+    font-style: normal
+    font-weight: 300
+    font-size: 26px
+    color: #C5C5C5

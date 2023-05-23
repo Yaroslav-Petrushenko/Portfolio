@@ -114,7 +114,6 @@ function showSlide(index) {
     slides.forEach((slide) => {
         slide.classList.remove('active');
     });
-    // sliderBar.style.height = slides[index].offsetHeight + 'px';
     slides[index].classList.add('active');
 }
 
@@ -125,7 +124,7 @@ left.addEventListener('click', e => {
         currentSlide = 0;
     }
     showSlide(currentSlide);
-}) 
+})
 
 right.addEventListener('click', e => {
     e.preventDefault();
@@ -134,9 +133,33 @@ right.addEventListener('click', e => {
         currentSlide = slides.length - 1;
     }
     showSlide(currentSlide);
-}) 
+})
 
 showSlide(currentSlide);
+
+// slider-card-my-work
+// const slider = document.querySelector('.my-latest-work');
+// const slides_card = slider.querySelectorAll('.my-work');
+// const dots = slider.querySelectorAll('.dot');
+
+// slides_card[0].classList.add('active');
+// dots[0].classList.add('active');
+
+// function changeSlide(index) {
+//     slides_card.forEach((slide) => slide.classList.remove('active'));
+//     dots.forEach((dot) => dot.classList.remove('active'));
+
+//     slides_card[index].classList.add('active');
+//     dots[index].classList.add('active');
+// }
+
+// dots.forEach((dot, index) => {
+//     dot.addEventListener('click', () => {
+//         changeSlide(index);
+//     });
+// });
+
+
 // cursor 
 
 // // Створити новий елемент для курсора
