@@ -1,21 +1,107 @@
 header 
-    height: 100vh
+    min-height: 100vh
 .header
     display: flex
     justify-content: space-between
     align-items: center
-    padding-top: 70rem
+    padding-top: 30rem
+    max-width: 95%
     margin: 0 auto
 
+    +media(1300)
+        padding-top: 70rem
+    +media(1550)
+        max-width: 1500rem
+
 .logo
-    padding-left: 70rem
+    z-index: 100
     svg
         color: #ffffff
 
+.headerHid  
+    // transform: translateY(-100%)
+
+.hamburger
+    height: 50px
+    display: flex
+    flex-direction: column
+    justify-content: center
+    z-index: 8
+    +media(900)
+        display: none
+    span:first-child
+        margin: 4px 0
+        width: 28px
+        height: 3px
+        background-color: #fff
+        border-radius: 5px
+        align-self: flex-end
+    span:last-child
+        margin: 4px 0
+        width: 20px
+        height: 3px
+        background-color: #fff
+        border-radius: 5px
+        align-self: flex-end
+
+.nav-menu
+    position: absolute
+    display: none   
+    transition: all 1s ease
+    
+
+
+.active-burger 
+    display: inline-block
+    +media(900)
+        display: none
+    ul
+        padding-left: 20rem
+        display: flex
+        justify-content: center
+        margin: 0
+        position: fixed
+        flex-direction: column
+        align-items: flex-start
+        top: 0
+        bottom: 0
+        left: 0
+        right: 0
+        background-color: #262626
+        background-size: cover
+        overflow: auto
+        li
+            a
+                display: inline-block
+
+.top-menu 
+    margin: 15rem 0
+    li 
+        margin-right: 0rem
+        list-style: none
+        +media(900)
+            margin-right: 30rem
+    a 
+        text-transform: uppercase
+        position: relative
+        padding: 20rem 0rem
+        font-family: 'Nunito'
+        font-style: italic
+        font-size: 47px
+        font-weight: 250
+        line-height: 47px
+        color: #ffffff
+        transition: all .5s ease
+
+.top-menu li:last-child 
+    margin-right: 0
+
+
 .contact-header 
-    padding-right: 70rem
+    display: none
+    // padding-right: 70rem
     a
-        font-size: 14px
+        font-size: 14rem
         text-transform: uppercase
         color: #FFFFFF99
         background: #FFFFFF0D
@@ -26,6 +112,8 @@ header
         &:hover
             color: #FFFFFFD9
             border: 2rem solid #FFFFFFD9
+    +media(900)
+        display: inline-block
 
 .greeting-whith-me 
     justify-content: space-between
@@ -38,10 +126,10 @@ header
     width: 70%
     padding-bottom: 100rem
     .hi
-        font-size: 20px
+        font-size: 20rem
         color: #FFFFFF
         font-family: Inter
-        text-shadow: 0px 4px 4px 0px #00000080
+        text-shadow: 0rem 4rem 4rem 0rem #00000080
         font-style: normal
         font-weight: 300
     h1 
@@ -50,22 +138,24 @@ header
         text-transform: uppercase
         color: #FFFFFF
         line-height: 1
-        text-shadow: 0px 4px 4px 0px #00000080
+        text-shadow: 0rem 4rem 4rem 0rem #00000080
         font-family: 'Nunito'
         font-style: italic
         font-weight: 100
         font-size: 47rem
         +media(768)
-            font-size: 70px
+            font-size: 70rem
         +media(992)
-            font-size: 90px
+            font-size: 90rem
     .my-name
         color: #FFFFFF
         font-family: Inter
         font-style: normal
-        text-shadow: 0px 4px 4px 0px #00000080
+        text-shadow: 0rem 4rem 4rem 0rem #00000080
         font-weight: 300
-        font-size: 26rem
+        font-size: 20rem
+        +media(425)
+            font-size: 26rem
     +media(1100)
         padding-bottom: 0
         width: 100%
@@ -77,7 +167,7 @@ header
     display: flex
     justify-content: center
     align-items: center
-    // z-index: -100
+    z-index: -1
     +media(1100)
         margin: 0
 

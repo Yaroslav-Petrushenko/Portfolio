@@ -21,15 +21,22 @@ html(lang="en")
                             <path d="M15.4313 38.5V20.6147H20.0713C25.5595 20.6147 30 16.1053 30 10.5827C30 5.00934 25.5595 0.5 20.0713 0.5H13.8347V38.5H15.4313ZM20.0713 2.12133C24.7114 2.12133 28.4034 5.87067 28.4034 10.5827C28.4034 15.244 24.7114 18.9933 20.0713 18.9933H15.4313V2.12133H20.0713Z" fill="white"/>
                         </svg>
                     .contact-header 
-                        a(href="") Contacts
+                        a(href="#contact") Contacts
+                    .hamburger 
+                        span 
+                        span 
+                    nav.nav-menu
+                        ul.top-menu.flex#menu
+                            +menu(mainMenu) 
                 .greeting-whith-me.flex.wrapper
                     .greeting-visitors
                         p.hi HI! 
                         h1 I`m Front-End developer
-                        p.my-name My name is Yaroslav Petrushenko
+                        p.my-name My name is
+                        p.my-name Yaroslav Petrushenko
                     .animation-structure
                         canvas#canvas3d(style="width: 250%; height: 250%;")
-            section.main.flex.wrapper
+            section.main.flex.wrapper#about
                 .text-about-me
                     p Hello everyone. I like to learn new things, recently I discovered the beautiful, limitless world of programming. I am looking for an entry level position in a company to be hardworking, learn, grow and develop in the long term. I am open to work opportunities where I can contribute, learn and grow. If you have a good opportunity that matches my skills and experience, then don't hesitate to contact me.
                 .get-to-know-me
@@ -42,7 +49,7 @@ html(lang="en")
                     p - Hashtag academy, educational program: Front-end developer.
                     p - Sumy National Agrarian University. Specialty: Construction and civil engineering. Qualification: master's degree. Professional qualification: civil engineer.
                     p - Sumy National Agrarian University. Specialty: Construction. Qualification: bachelor's degree. Professional qualification: Bachelor of construction.
-            section.skills.flex.wrapper
+            section.skills.flex.wrapper#skills
                 .button-slider
                     span.left 
                     span.right
@@ -50,7 +57,7 @@ html(lang="en")
                     p My Skills
                     .slider-bar.flex
                         +skillsBar(skillMenu)  
-            section.my-latest-work.wrapper
+            section.my-latest-work.wrapper#portfolio
                 .my-work
                     .my-work-img 
                         img(src="img/Rikka.jpg", alt="rikka")
@@ -78,11 +85,7 @@ html(lang="en")
                         p.tehc SassPug, Bootstrap
                         p.descr Only responsive layout, various hover effects, bootstrap.
                         a.view-site(href="http://") view site
-                //- .dots 
-                //-     span.dot
-                //-     span.dot
-                //-     span.dot
-            footer.wrapper
+            footer.wrapper#contact
                 .footer-sect 
                     .write-dev-des.flex
                         .write-me 
@@ -91,14 +94,16 @@ html(lang="en")
                         .info-for-creators.flex
                             .dev-des-info 
                                 h3 Fully developed
-                                p Yaroslav Petrushenko
-                                a(href="mailto:igorovica@gmail.com") igorovica@gmail.com        
-                                a(href="" target="_blank") CV   
+                                .info-block
+                                    p Yaroslav Petrushenko
+                                    a(href="mailto:igorovica@gmail.com") igorovica@gmail.com        
+                                    a(href="" target="_blank") CV   
                             .dev-des-info
                                 h3 Creative Design
-                                p Vladislav Kiyan
-                                a(href="mailto:vlakiyn@gmail.com") vlakiyn@gmail.com
-                                a(href="lavasog") inst: lavasog
+                                .info-block
+                                    p Vladislav Kiyan
+                                    a(href="mailto:vlakiyn@gmail.com") vlakiyn@gmail.com
+                                    a(href="lavasog") inst: lavasog
                 .let-work.flex
                     p let's work
                     .social.flex

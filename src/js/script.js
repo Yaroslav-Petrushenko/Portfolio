@@ -137,6 +137,53 @@ right.addEventListener('click', e => {
 
 showSlide(currentSlide);
 
+
+//hamburger
+let hamburger = document.querySelector(".hamburger");
+let nmenu = document.querySelector(".nav-menu");
+
+hamburger.onclick = function () {
+    nmenu.classList.toggle("active-burger");
+}
+
+window.addEventListener('resize', function () {
+    nmenu.classList.remove("active-burger");
+});
+
+const headerSection = document.querySelector('.header');
+let lastScrollTop = 0;
+
+function menuBackground() {
+    let scrltop = window.pageYOffset || document.documentElement.scrollTop;
+    if (scrltop > lastScrollTop) {
+        nmenu.classList.remove("active-burger");
+    } else {
+        nmenu.classList.remove("active-burger");
+    }
+
+    lastScrollTop = scrltop <= 0 ? 0 : scrltop;
+}
+
+window.addEventListener(`scroll`, menuBackground);
+
+//scroll
+const links = document.querySelectorAll('a[href^="#"]');
+
+links.forEach(link => {
+    link.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        const targetId = link.getAttribute('href');
+
+        const targetElement = document.querySelector(targetId);
+
+        targetElement.scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+});
+
+
 // slider-card-my-work
 // const slider = document.querySelector('.my-latest-work');
 // const slides_card = slider.querySelectorAll('.my-work');
@@ -188,3 +235,5 @@ showSlide(currentSlide);
 //     customCursor.style.left = mouseX + 'px';
 //     customCursor.style.top = mouseY + 'px';
 // });
+
+

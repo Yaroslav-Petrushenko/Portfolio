@@ -23,6 +23,25 @@
         },
     ] 
 
+- 
+    let mainMenu = [
+        {
+            name: "About" , 
+            url: "#about"
+        },
+        {
+            name: "Skills" , 
+            url: "#skills"
+        },
+        {
+            name: "Portfolio" , 
+            url: "#portfolio"
+        },
+        {
+            name: "Contact" , 
+            url: "#contact"
+        },
+    ] 
 -
 
 
@@ -31,4 +50,8 @@ mixin skillsBar (items)
         .skill-name
             h2 #{item.name}
 
-//- +skillsBar(skillMenu)  
+.scroll
+mixin menu (items) 
+    for item in items 
+        li
+            a.menu-link(href=item.url) #{item.name} 
